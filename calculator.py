@@ -32,7 +32,7 @@ class Calculator:
         Button(width=11, height=4, text="c", relief="flat", command=self.clear).place(x=0, y=350)
 
     def show(self, value):
-        self.entry_value += str(value)  # تأكد من تحويل القيمة إلى سلسلة
+        self.entry_value += str(value)  
         self.equation.set(self.entry_value)
 
     def clear(self):
@@ -43,7 +43,7 @@ class Calculator:
         try:
             result = eval(self.entry_value)
             self.equation.set(result)
-            self.entry_value = str(result)  # تحديث قيمة الإدخال
+            self.entry_value = str(result)  
         except Exception as e:
             self.equation.set("Error")
             self.entry_value = ""
